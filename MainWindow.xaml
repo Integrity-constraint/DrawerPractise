@@ -75,7 +75,7 @@
                         <materialDesign:PackIcon  Foreground="#4B0082" Width="25" Height="25" Kind="Menu"></materialDesign:PackIcon>
                     </Button>
                 </Grid>
-                <ListView Foreground="#9370DB">
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#9370DB">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Width="25" Margin="10" VerticalAlignment="Center" Height="25" Foreground="White" Kind="ViewDashboard"></materialDesign:PackIcon>
