@@ -23,8 +23,20 @@ namespace DrawerPractise
         public MainWindow()
         {
             InitializeComponent();
+
+            CloseMenu();
         }
 
+        void OpenMenus()
+        {
+            ButtonMenuOpen.Visibility = Visibility.Collapsed;
+            MenuClosebtn.Visibility = Visibility.Visible;
+        }
+        void CloseMenu()
+        {
+            ButtonMenuOpen.Visibility = Visibility.Visible;
+            MenuClosebtn.Visibility = Visibility.Collapsed;
+        }
         private void Exit(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -32,14 +44,12 @@ namespace DrawerPractise
 
         private void Opendrawer(object sender, RoutedEventArgs e)
         {
-            ButtonMenuOpen.Visibility = Visibility.Collapsed;
-            MenuClosebtn.Visibility = Visibility.Visible;
+            OpenMenus();
         }
 
         private void Closedrawer(object sender, RoutedEventArgs e)
         {
-            ButtonMenuOpen.Visibility = Visibility.Visible;
-            MenuClosebtn.Visibility = Visibility.Collapsed;
+            CloseMenu();
         }
     }
 }
