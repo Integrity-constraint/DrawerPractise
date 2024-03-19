@@ -8,17 +8,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1080">
     <Window.Resources>
-        <Storyboard x:Key="MenuOpen">
-            <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
-                <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
-
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+       
         <Storyboard x:Key="MenuClose">
             <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
                 <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="60"/>
+
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="MenuOpen">
+            <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
 
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -69,10 +70,10 @@
             <StackPanel>
                 <Grid  Height="150" Background="White">
                     <Button Name="ButtonMenuOpen" Click="Opendrawer" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed">
-                        <materialDesign:PackIcon Foreground="#4B0082" Width="25" Height="25" Kind="ArrowLeft"></materialDesign:PackIcon>
+                        <materialDesign:PackIcon Foreground="#4B0082" Width="25" Height="25" Kind="Menu"></materialDesign:PackIcon>
                     </Button>
                     <Button Name="MenuClosebtn" Click="Closedrawer" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right">
-                        <materialDesign:PackIcon  Foreground="#4B0082" Width="25" Height="25" Kind="Menu"></materialDesign:PackIcon>
+                        <materialDesign:PackIcon  Foreground="#4B0082" Width="25" Height="25" Kind="ArrowLeft"></materialDesign:PackIcon>
                     </Button>
                 </Grid>
                 <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#9370DB">
